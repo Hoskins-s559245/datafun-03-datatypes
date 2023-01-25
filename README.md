@@ -1,3 +1,10 @@
+Student Name: Ash Hoskins, Student #S559245
+Course: CSIS 44-609 - Data Analytics Fundamentals
+Professor Denise Case
+Domain: Geospatial data
+Module 3 Project
+Date: 1/25/2023
+
 # datafun-03-datatypes
 
 > Practice with Python data types, filter(), map(), and list comprehensions
