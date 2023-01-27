@@ -1,0 +1,44 @@
+
+
+==============================================================
+==============================================================
+
+ Welcome!
+
+ It's 2023-01-25 at 10:43 PM
+
+ This file is running on:    nt Windows 10
+ 
+ The Python version is:      3.10.8
+ 
+ The Python interpreter is at:
+ C:\Users\Hoski\miniconda3\python.exe
+
+ The active environment should be either conda OR pip (one should be None):
+
+     Active conda env is: None
+     Active pip env is:   None
+ 
+ The path to the active virtual environment is:
+
+ C:\Users\Hoski\miniconda3
+ 
+ The Current Working Directory (CWD) where this command was launched is:
+
+ C:\Users\Hoski\Desktop\NWMS\CSIS 44-608 - Data Analytics Fundamentals\Modules\Module 3\datafun-03-datatypes
+ 
+ The absolute path to the data directory is:
+
+ C:\Users\Hoski\Desktop\NWMS\CSIS 44-608 - Data Analytics Fundamentals\Modules\Module 3\datafun-03-datatypes\
+ 
+ The absolute path to this source directory is:
+
+ c:\Users\Hoski\Desktop\NWMS\CSIS 44-608 - Data Analytics Fundamentals\Modules\Module 3\datafun-03-datatypes
+ 
+ The absolute path to this file is:
+
+ c:\Users\Hoski\Desktop\NWMS\CSIS 44-608 - Data Analytics Fundamentals\Modules\Module 3\datafun-03-datatypes\about.py
+ 
+==============================================================
+==============================================================
+

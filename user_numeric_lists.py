@@ -6,9 +6,48 @@ Modify this docstring.
 # import some modules first - how many can you make use of?
 
 import math
+import statistics as stats
+import numpy as np
+import random as rn
+from example_numeric_lists import score_list
+
+#Creats a numpy array from DSCI Measurments.
+data = np.loadtxt('DSCI.txt', dtype='int')
+
+#Declare and create lists for Task 3.
+list1 = score_list
+listx = [*range(10)]
+listy =[]
+listy2 = []
+i = 0
+
+#Convert numpy array from DSCI measurements file to List elements file type
+for n in data:
+    listy.append(n)
+
+#Task 3 Step 4.) Create listy so the values are pretty much linear, 
+#but not exactly - we'll draw a straight-line through the data to make predictions.
+while i != len(listx):
+    listy2.append(listx[i] + rn.randrange(0,10))
+    i+= 1
+
+
+
+
 
 
 # define some functions
+#Task 3. List 1: function that takes all data from a given list 
+#and provides all statistical information.
+def superstats(information):
+    s1 = [stats.mean(information), stats.median(information), stats.mode(information), stats.pstdev(information), stats.variance(information)]
+    return s1
+
+def corr()
+
+
+
+
 
 
 def get_area_of_lot(length, width):
@@ -42,7 +81,9 @@ def get_area_of_lot(length, width):
 if __name__ == "__main__":
 
     # call your functions here (see instructions)
-    print("your code here")
+    statinfolisty = superstats(listy)
+    
+
 
 
 # Why? Why only print if this the module called?
