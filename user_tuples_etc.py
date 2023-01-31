@@ -30,7 +30,7 @@ print("A Concatenation of the coordinates:" ,conc)
 #Check tuple for 42.845 in lake latitude tuple
 hasfirtytwo = 42.845 in lakelat
 print()
-print(f"{hasfirtytwo = }")
+print("Does the set contain 42.845?", hasfirtytwo)
 
 #Testing tuple indexing
 first = lakelat[0]
@@ -60,8 +60,8 @@ print()
 print(f"{Union = }")
 print(f"{Intersection = }")
 print(f"{Difference = }")
+print()
 
-print(values)
 
 
 #Word Count dictionary from lakes.txt 
@@ -83,6 +83,7 @@ for word2 in text:
         characters[word2] = 1
 
 print("Individual Character counts from the lakes.txt list: ", characters)
+print()
 
 #Dictionary of Lakes.txt with Longtitude and Latitude sets
 information = {
