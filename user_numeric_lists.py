@@ -1,5 +1,13 @@
 """
-Modify this docstring.
+
+Student Name: Ash Hoskins, Student #S559245
+Course: CSIS 44-609 - Data Analytics Fundamentals
+Professor Denise Case
+Domain: Geospatial data
+Module 3: Assignment 1 Task 3.
+
+Working with List.
+
 
 """
 
@@ -10,8 +18,6 @@ import statistics as stats
 import numpy as np
 import random as rn
 import math
-
-
 
 #Creats a numpy array from DSCI Measurments.
 data = np.loadtxt('DSCI.txt', dtype='int')
@@ -74,7 +80,7 @@ listy =[]
 listy2 = []
 i = 0
 
-#Convert numpy array from DSCI measurements file to List elements data type
+#Convert numpy array from DSCI measurements file to List elements data type apparently not needed in this project
 for n in data:
     listy.append(n)
 
@@ -103,34 +109,46 @@ def corr(xlist, ylist):
     
 #Task 3 List 3. Utilizing built in python functions on lists. Returns list of results.
 def list3(newlist):
-    min = min(newlist)
-    max = max(newlist)
-    len = len(newlist)
-    sum = sum(newlist)
-    avg = round(sum/len)
-    set = set(newlist)
-    sort1 = sorted(newlist)
-    sort2 = sorted(newlist, reverse= True)
+    minx = np.min(newlist)
+    maxx = np.max(newlist)
+    lenx = len(newlist)
+    sumx = sum(newlist)
+    avgx = round(sumx/lenx)
+    setx = set(newlist)
+    sort1x = sorted(newlist)
+    sort2x = sorted(newlist, reverse= True)
 
-    s3 = [min, max, len, sum, avg, set, sort1, sort2]
+    s3 = [minx, maxx, lenx, sumx, avgx, setx, sort1x, sort2x]
     return s3
 
 #Task 3 List 4. List methods
 def methody(anotherlist1, anotherlist2):
     
-    lst = anotherlist1.append(700)
-    lst = anotherlist1.extend(anotherlist2)
-    lst = anotherlist1.insert(5, 277)
-    lst = anotherlist1.remove(700)
-    lst = anotherlist1.append(lst.count(93))
-    lst = anotherlist1.sort()
-    lst = anotherlist1.sort(reverse = True)
-    lst.pop(0)
-    
-    v = len(lst)
-    
-    lst.pop(v-1)
-    return lst
+    anotherlist1.append(700)
+    print("Appended list with the value 700: ", anotherlist1)
+    anotherlist1.extend(anotherlist2)
+    print("Extended list with a 2nd list: ", anotherlist1)
+    anotherlist1.insert(5, 277)
+    print("Inserted value of 277 at position 5 of the list ", anotherlist1)
+    anotherlist1.remove(700)
+    print("Removed 700 from the list", anotherlist1)
+    number = anotherlist1.count(93)
+    print("The number of times 93 exists in the list is: ", number, " Times")
+    lst = sorted(anotherlist1)
+    print("Display the list sorted",lst )
+    rlist = sorted(anotherlist1, reverse= True)
+    print("Display the list reverse sorted", rlist)
+    print("The first element in the list: ", anotherlist1[0],)
+    anotherlist1.pop(0)
+    print("The Resulting list after the removal of the first elemental is", anotherlist1)
+    v = len(anotherlist1)
+    print("The Last Element on the list is ", anotherlist1[v-1])
+    anotherlist1.pop(v-1)
+    print("Removal of the Last element in the list results the final list of: ", anotherlist1)
+
+    return anotherlist1
+
+
 #Task 3. List 5. List Transformations. Filter function that 
 #returns boolean on if the value is less than or equal to 100 
 def filter1(list2):
@@ -154,14 +172,31 @@ def vol(attribute):
     dz = list(map(lambda x: math.pow(x,3), attribute))
 
     return dz
-    
+
+#Task 3 List 6. Use List Comprehension to get x such that x is less than or equal to 100
+def comp1(list): 
+
+    da = [x for x in list if x <= 100]
+    return da
+
+#Task 3 List 6. USe list comprehension to get x^3 for each value in the list.
+#for simplistic reasonings used listx instead of list1; so the terminal isn't spammed with alot of numbers.
+def comp2(list):
+    db = [math.pow(x,3) for x in list]
+    return db
+
+#Task 3 list 6. Custom Transformation
+def comp3 (list):
+    dc = [x for x in list if x <= 100]
+    dd = np.around([np.sqrt(x) for x in dc], 2)
+    return dd
+
 
 def get_area_of_lot(length, width):
     """
     Return area of a lot given the length and width of the lot.
 
     Could this fail?
-
     """
 
     # Use a try / except / finally block when something
@@ -188,10 +223,39 @@ if __name__ == "__main__":
 
     # call your functions here (see instructions)
     statinfolisty = superstats(listy)
-print(list(filter(filter1, list1)))
-print(vol(listx))
+    correl = corr(listx, listy)
+    builtin = list3(listy)
 
 
+print()
+print("List 1 Tasks are as follows:")
+print()
+print("The Mean of List y is: ", statinfolisty[0], " The Median is: ", statinfolisty[1], " The Mode is: ", statinfolisty[2])
+print("The Standard Dev is: ", round(statinfolisty[3], 2), " and the variance is: ", statinfolisty[4])
+print()
+print("List 2 Tasks are as follows:")
+print("Calculating the future prediction between two lists provides: ", round(correl[1],2), " at future value 15")
+print("The correlation percentage between the teo list is: " , round(correl[0],2))
+print()
+print("List 3 Tasks are as follows: ")
+print("The Minimum value on the list is: ", builtin[0], " The maximuim value on the list is: ", builtin[1], " The Length of the list is: ", builtin[2], "The Sum of the List is:", builtin[3])
+print("The Length of the Average of the list is: ", builtin[4], " The Set of the List is", builtin[5])
+print("The List being sorted directly is: ", builtin[6])
+print("The List being reversed sorted is: ", builtin[7])
+print()
+print("List 4 Tasks are as follows: ")
+methody(listx, listy)
+print()
+print("List 5 Tasks are as follows:")
+print("Elements in the list that are less than or equal to 100", list(filter(filter1, list1)))
+print("Using a map to take the cube root of the list", map1(listx))
+print("Calculating the volume of a list of sides: Starting list is", listx)
+print("Resulting list of Volumes is", vol(listx))
+print()
+print("List 6 Task list are as follows:")
+print("Utilize List Comprehension to get values of 100 or less", comp1(listx))
+print("Utilize List Comprhension to raise each element to the power of 3: Used list y for simpler display", comp2(listy))
+print("A custom transformation that looks for entries under 100 and square roots the element", comp3(listx))
 
 # Why? Why only print if this the module called?
 # Because when you write good functions, you may want to
