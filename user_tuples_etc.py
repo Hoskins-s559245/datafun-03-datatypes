@@ -95,7 +95,7 @@ information = {
 for key, value in information.items():
     print(key, value)
 
-#Comprehension - This is going to suck so bad
+#Comprehension
 something = {word: text.count(word) for word in text}
 
 print()
